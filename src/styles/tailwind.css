@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Colors */
+    --color-primary: #1E40AF; /* blue-800 */
+    --color-primary-foreground: #FFFFFF; /* white */
+    
+    /* Secondary Colors */
+    --color-secondary: #475569; /* slate-600 */
+    --color-secondary-foreground: #FFFFFF; /* white */
+    
+    /* Accent Colors */
+    --color-accent: #F59E0B; /* amber-500 */
+    --color-accent-foreground: #1F2937; /* gray-800 */
+    
+    /* Background Colors */
+    --color-background: #F8FAFC; /* slate-50 */
+    --color-foreground: #1F2937; /* gray-800 */
+    
+    /* Surface Colors */
+    --color-card: #FFFFFF; /* white */
+    --color-card-foreground: #1F2937; /* gray-800 */
+    
+    /* Popover Colors */
+    --color-popover: #FFFFFF; /* white */
+    --color-popover-foreground: #1F2937; /* gray-800 */
+    
+    /* Muted Colors */
+    --color-muted: #F1F5F9; /* slate-100 */
+    --color-muted-foreground: #64748B; /* slate-500 */
+    
+    /* Border & Input */
+    --color-border: #E2E8F0; /* slate-200 */
+    --color-input: #E2E8F0; /* slate-200 */
+    --color-ring: #F59E0B; /* amber-500 */
+    
+    /* Status Colors */
+    --color-success: #059669; /* emerald-600 */
+    --color-success-foreground: #FFFFFF; /* white */
+    
+    --color-warning: #D97706; /* amber-700 */
+    --color-warning-foreground: #FFFFFF; /* white */
+    
+    --color-error: #DC2626; /* red-600 */
+    --color-error-foreground: #FFFFFF; /* white */
+    
+    --color-destructive: #DC2626; /* red-600 */
+    --color-destructive-foreground: #FFFFFF; /* white */
+    
+    /* Additional Semantic Colors */
+    --color-info: #1E40AF; /* blue-800 */
+    --color-info-foreground: #FFFFFF; /* white */
+    
+    /* Radius */
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 20px;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.08);
+    --shadow-md: 0 4px 6px rgba(15, 23, 42, 0.10);
+    --shadow-lg: 0 10px 15px rgba(15, 23, 42, 0.12);
+    --shadow-xl: 0 20px 40px -8px rgba(15, 23, 42, 0.16);
+  }
+
+  .dark {
+    /* Primary Colors */
+    --color-primary: #3B82F6; /* blue-500 */
+    --color-primary-foreground: #FFFFFF; /* white */
+    
+    /* Secondary Colors */
+    --color-secondary: #64748B; /* slate-500 */
+    --color-secondary-foreground: #FFFFFF; /* white */
+    
+    /* Accent Colors */
+    --color-accent: #FBBF24; /* amber-400 */
+    --color-accent-foreground: #1F2937; /* gray-800 */
+    
+    /* Background Colors */
+    --color-background: #0F172A; /* slate-900 */
+    --color-foreground: #E2E8F0; /* slate-200 */
+    
+    /* Surface Colors */
+    --color-card: #1E293B; /* slate-800 */
+    --color-card-foreground: #E2E8F0; /* slate-200 */
+    
+    /* Popover Colors */
+    --color-popover: #1E293B; /* slate-800 */
+    --color-popover-foreground: #E2E8F0; /* slate-200 */
+    
+    /* Muted Colors */
+    --color-muted: #334155; /* slate-700 */
+    --color-muted-foreground: #94A3B8; /* slate-400 */
+    
+    /* Border & Input */
+    --color-border: #334155; /* slate-700 */
+    --color-input: #334155; /* slate-700 */
+    --color-ring: #FBBF24; /* amber-400 */
+    
+    /* Status Colors */
+    --color-success: #10B981; /* emerald-500 */
+    --color-success-foreground: #FFFFFF; /* white */
+    
+    --color-warning: #F59E0B; /* amber-500 */
+    --color-warning-foreground: #FFFFFF; /* white */
+    
+    --color-error: #EF4444; /* red-500 */
+    --color-error-foreground: #FFFFFF; /* white */
+    
+    --color-destructive: #EF4444; /* red-500 */
+    --color-destructive-foreground: #FFFFFF; /* white */
+    
+    /* Additional Semantic Colors */
+    --color-info: #3B82F6; /* blue-500 */
+    --color-info-foreground: #FFFFFF; /* white */
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  h1 {
+    @apply text-4xl font-semibold leading-tight;
+  }
+
+  h2 {
+    @apply text-3xl font-semibold leading-tight;
+  }
+
+  h3 {
+    @apply text-2xl font-medium leading-snug;
+  }
+
+  h4 {
+    @apply text-xl font-medium leading-snug;
+  }
+
+  h5 {
+    @apply text-lg font-medium leading-normal;
+  }
+
+  .caption {
+    font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    @apply text-sm leading-relaxed tracking-wide;
+  }
+
+  .data-text {
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-feature-settings: 'tnum' 1;
+  }
+
+  @media (max-width: 768px) {
+    body {
+      font-size: 15px;
+    }
+  }
+}
+
+@layer utilities {
+  .transition-smooth {
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .transition-fast {
+    transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .transition-slow {
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .shadow-elevation-1 {
+    box-shadow: 0 2px 4px rgba(15, 23, 42, 0.08);
+  }
+
+  .shadow-elevation-2 {
+    box-shadow: 0 4px 8px rgba(15, 23, 42, 0.10);
+  }
+
+  .shadow-elevation-3 {
+    box-shadow: 0 8px 16px rgba(15, 23, 42, 0.12);
+  }
+
+  .shadow-elevation-4 {
+    box-shadow: 0 16px 32px rgba(15, 23, 42, 0.14);
+  }
+
+  .dark .shadow-elevation-1 {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .dark .shadow-elevation-2 {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  }
+
+  .dark .shadow-elevation-3 {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  }
+
+  .dark .shadow-elevation-4 {
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.6);
+  }
+
+  .scrollbar-custom::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-track {
+    @apply bg-muted rounded-md;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-thumb {
+    @apply bg-border rounded-md;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground;
+  }
+}
